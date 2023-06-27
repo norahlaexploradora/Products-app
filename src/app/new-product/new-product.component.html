@@ -1,0 +1,36 @@
+<mat-card>
+    <mat-card-title>Agregar Producto</mat-card-title>
+    <mat-card-content>
+        <form (submit)="addProduct()">
+            <mat-form-field appearance="outline">
+             <mat-label>Nombre:</mat-label>
+                    <input matInput type="text" name="name"[(ngModel)] ="nombre">
+            </mat-form-field>
+
+
+           <mat-form-field appearance="outline">
+                    <mat-label>Stock:</mat-label>
+                    <input matInput type="text" name="stock"[(ngModel)] ="stock">
+                </mat-form-field>
+
+         <mat-form-field appearance="outline">
+                    <mat-label>Precio:</mat-label>
+                    <input matInput type="text" name="price"[(ngModel)] ="precio">
+                </mat-form-field>
+
+                <mat-checkbox name= "active" class="example-margin"[(ngModel)]= "activo">Activo</mat-checkbox>
+       
+            <mat-form-field appearance="outline">
+                    <mat-label>Fecha de inclusión:</mat-label>
+                    <input matInput type="date" name="date_added"[(ngModel)] ="fechaInclusion">
+
+            </mat-form-field>
+            <button mat-stroked-button color="accent" type="submit">Guardar Producto</button>
+
+
+
+        </form>
+    </mat-card-content>
+
+
+</mat-card>

@@ -1,0 +1,35 @@
+<mat-toolbar color="primary">
+
+    <a mat-button routerLink="/">Inicio</a>
+  
+    <a mat-button routerLink="/products">Productos</a>
+  
+    <a mat-button routerLink="/new-product">Nuevo producto</a>
+  
+  </mat-toolbar>
+  
+  <mat-card class="card">
+  
+    <mat-card-title>Gráficas de productos</mat-card-title>
+   
+    <mat-card-content>
+  
+      <div class="chart-row">
+  
+        <ngx-charts-pie-chart class="chart" [view]="[400, 300]" [scheme]="colorScheme"  [results]="stockControl" [legend]="false" [labels]="true"
+  
+          [explodeSlices]="false" [doughnut]="true" [gradient]="true"></ngx-charts-pie-chart>
+  
+        <ngx-charts-pie-chart class="chart" [view]="[400, 300]" [scheme]="colorScheme" [results]="priceControl" [legend]="false" [labels]="true"
+  
+          [explodeSlices]="false" [doughnut]="true" [gradient]="true"></ngx-charts-pie-chart>
+  
+      </div>
+     
+      
+    </mat-card-content>
+    <img src="/Users/isauradocampo/Desktop/PROGRAMACIÓN/INICIACION A LA PROGRAMACION/Angular/istockphoto-172406417-170667a.jpg">
+  
+  
+  </mat-card>
+ 
